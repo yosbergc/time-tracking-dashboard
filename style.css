@@ -1,0 +1,193 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+main {
+    min-height: 100vh;
+    background-color: hsl(226, 43%, 10%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card {
+    margin-top: 50px;
+    width: 90%;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 20px;
+    height: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.cardUp {
+    background-color: hsl(246, 80%, 60%);
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cardUp p {
+    font-weight: 400;
+    font-size: 15px;
+    color: hsl(236, 100%, 87%);
+}
+.cardUp .name {
+    font-weight: 300;
+    font-size: 18px;
+    color: white;
+}
+.card .image img {
+    width: 60px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.card-down {
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.card-down button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+.card-down button:hover {
+    cursor: pointer;
+}
+.card-category {
+    width: 90%;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 350px;
+    background-color: hsl(15, 100%, 70%);
+    position: relative;
+}
+.card-category .imgContainer {
+    height: 40px;
+    overflow: hidden;
+    width: 100%;
+    background-color: hsl(15, 100%, 70%);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 20px;
+}
+.card-category .imgContainer img {
+    width: 50px;
+    object-fit: cover;
+}
+.card-category-info {
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background-color: hsl(235, 46%, 20%);
+}
+.category-name {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.category-time {
+    font-size: 30px;
+    margin-top: 5px;
+    color: white;
+    font-weight: 300;
+}
+.secondPart-category-info img {
+    width: 20px;
+}
+.secondPart-category-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+}
+.secondPart-category-info .timeTotal {
+    color: hsl(236, 100%, 87%);
+}
+.card-category.play {
+    background-color: hsl(195, 74%, 62%);
+}
+.card-category.play .imgContainer {
+    background-color: hsl(195, 74%, 62%);
+}
+.card-category.study .imgContainer {
+    background-color: hsl(348, 100%, 68%);
+}
+.card-category.study {
+    background-color: hsl(348, 100%, 68%);
+}
+.card-category.exercise {
+    background-color: hsl(145, 58%, 55%);
+}
+.card-category.exercise .imgContainer {
+    background-color: hsl(145, 58%, 55%);
+}
+.card-category.social .imgContainer {
+    background-color: hsl(264, 64%, 52%);
+}
+.card-category.social {
+    background-color: hsl(264, 64%, 52%);
+}
+.card-category.self-care {
+    background-color: hsl(43, 84%, 65%);
+}
+.card-category.self-care .imgContainer {
+    background-color: hsl(43, 84%, 65%);
+}
+@media (min-width: 1280px) {
+    body {
+        background-color: hsl(226, 43%, 10%);
+    }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        min-height: auto;
+        height: 95vh;
+        padding: 20px;
+        align-content: start;
+    }
+    .card-category-info {
+        max-height: 200px;
+        padding: 40px 20px;
+    }
+    .card {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        justify-self: center;
+        margin-right: 20px;
+        align-self: center;
+    }
+    .card-category.work, .card-category.play, .card-category.study {
+        align-self: end;
+    }
+    .card-category.self-care, .card-category.social, .card-category.exercise {
+        align-self: start;
+    }
+    .cardUp {
+        height: 70%;
+        border-radius: 20px;
+        flex-direction: column;
+        align-items: start;
+    }
+    .card-down {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .card .image img {
+        width: 50%;
+    }
+    .cardUp .name {
+        font-size: 35px;
+    }
+    .category-time {
+        font-size: 25px;
+    }
+}
